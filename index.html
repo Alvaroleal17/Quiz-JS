@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600&family=Kanit:wght@500&family=Open+Sans:wght@500&family=Oswald:wght@600&family=Roboto:wght@700&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="start-quiz">
+      <div class="box">
+        <h1>Quiz de Cultura General</h1>
+        <button type="button" data-dismiss="start-quiz" id="start">Empezar</button>
+      </div>
+    </div>
+    <div class="quiz-container">
+      <div class="numero-pregunta">
+        <h3>
+          Pegunta <span class="num-pregunta"></span> de
+          <span class="preguntas-totales"></span>
+        </h3>
+      </div>
+      <div class="pregunta"></div>
+      <div class="opciones">
+        <div id="0" class="opcion1" onclick="check(this)"></div>
+        <div id="1" class="opcion2" onclick="check(this)"></div>
+        <div id="2" class="opcion3" onclick="check(this)"></div>
+        <div id="3" class="opcion4" onclick="check(this)"></div>
+      </div>
+      <div class="button btn">
+        <button type="button" onclick="next()" class="btn">Siguiente</button>
+      </div>
+      <div class="rastreador-respuestas"></div>
+    </div>
+    <div class="quiz-over">
+      <div class="box">
+        <h1>
+          Buen Trabajo! <br />
+          Obtuviste <span class="respuestas-correctas"></span> de
+          <span class="preguntas-totales2"></span> respuestas correctas. Eso es
+          <span class="porcentaje"></span>. Intentalo nuevamente!
+        </h1>
+        <button type="button" onclick="tryAgain()">Intentar de nuevo!</button>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
